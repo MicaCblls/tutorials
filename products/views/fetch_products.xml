@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+        <record id="model_products_test" model="ir.model">
+            <field name="name">products.test</field>
+            <field name="model">products.test</field>
+            <field name="state">base</field>
+        </data>
+    </odoo>

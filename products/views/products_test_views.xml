@@ -1,0 +1,86 @@
+<odoo>
+    <data>
+        <record id="view_products_test_kanban" model="ir.ui.view">
+            <field name="name">products.test.kanban</field>
+            <field name="model">products.test</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="title"/>
+                    <field name="category"/>
+                    <field name="sku"/>
+                    <field name="selling_price"/>
+
+                    <templates>
+                        <t t-name="card">
+                            <div class="oe_kanban_global_click">
+                                <div>
+                                    <strong>
+                                        <field name="title"/>
+                                    </strong>
+                                </div>
+                                <div>SKU: <field name="sku"/>
+                                </div>
+                                <div>Price: <field name="selling_price"/>
+                                </div>
+                                <div>Category: <field name="category"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_products_test_list" model="ir.ui.view">
+            <field name="name">products.test.list</field>
+            <field name="model">products.test</field>
+            <field name="type">list</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="title"/>
+                    <field name="sku"/>
+                    <field name="selling_price"/>
+                    <field name="category"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_products_test_form" model="ir.ui.view">
+            <field name="name">products.test.form</field>
+            <field name="model">products.test</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="title"/>
+                            <field name="sku"/>
+                            <field name="selling_price"/>
+                            <field name="category"/>
+                            <field name="stock"/>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                            <field name="discountPercentage"/>
+                            <field name="brand"/>
+                            <field name="returnPolicy"/>
+                            <field name="availabilityStatus"/>
+                        </group>
+                        <group>
+                            <field name="width"/>
+                            <field name="height"/>
+                            <field name="depth"/>
+                            <field name="weight"/>
+                            <field name="image"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="products_test_action" model="ir.actions.act_window">
+            <field name="name">My Products</field>
+            <field name="res_model">products.test</field>
+            <field name="view_mode">kanban,list,form</field>
+        </record>
+    </data>
+</odoo>

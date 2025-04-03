@@ -1,0 +1,7 @@
+<odoo>
+    <menuitem id="products_test_root" name="Products">
+        <menuitem id="products_test_menu_order" name="ProductsTest">
+            <menuitem id="products_test_menu_records" name="Products List" action="products_test_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>
